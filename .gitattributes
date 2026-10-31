@@ -1,0 +1,7 @@
+autoloop_runs/iter_dual_01/train/checkpoints/000050/pretrained_model/model.safetensors filter=lfs diff=lfs merge=lfs -text
+autoloop_runs/iter_dual_01/train/checkpoints/000050/training_state/optimizer_state.safetensors filter=lfs diff=lfs merge=lfs -text
+autoloop_runs/iter_pingpong_01/train/checkpoints/000200/pretrained_model/model.safetensors filter=lfs diff=lfs merge=lfs -text
+autoloop_runs/iter_pingpong_01/train/checkpoints/000200/training_state/optimizer_state.safetensors filter=lfs diff=lfs merge=lfs -text
+autoloop_runs/iter_smoke_01/train/checkpoints/000050/pretrained_model/model.safetensors filter=lfs diff=lfs merge=lfs -text
+autoloop_runs/iter_smoke_01/train/checkpoints/000050/training_state/optimizer_state.safetensors filter=lfs diff=lfs merge=lfs -text
+*.safetensors filter=lfs diff=lfs merge=lfs -text
