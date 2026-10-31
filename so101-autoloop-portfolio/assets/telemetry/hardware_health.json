@@ -1,0 +1,111 @@
+{
+  "timestamp": 1792730696.480473,
+  "follower": {
+    "port": "/dev/tty.usbmodem5A7A0581921",
+    "connected": true,
+    "is_calibrated": true,
+    "motors": {
+      "shoulder_pan": {
+        "pos_deg": -5.1,
+        "load": 0,
+        "voltage_v": 12.6,
+        "temperature_c": 31
+      },
+      "shoulder_lift": {
+        "pos_deg": -102.15,
+        "load": 0,
+        "voltage_v": 12.7,
+        "temperature_c": 32
+      },
+      "elbow_flex": {
+        "pos_deg": 96.75,
+        "load": 0,
+        "voltage_v": 12.5,
+        "temperature_c": 31
+      },
+      "wrist_flex": {
+        "pos_deg": 76.57,
+        "load": 0,
+        "voltage_v": 12.5,
+        "temperature_c": 32
+      },
+      "wrist_roll": {
+        "pos_deg": -89.41,
+        "load": 0,
+        "voltage_v": 12.4,
+        "temperature_c": 31
+      },
+      "gripper": {
+        "pos_deg": 10.37,
+        "load": 0,
+        "voltage_v": 12.5,
+        "temperature_c": 34
+      }
+    }
+  },
+  "leader": {
+    "port": "/dev/tty.usbmodem5A680100721",
+    "connected": true,
+    "is_calibrated": true,
+    "motors": {
+      "shoulder_pan": {
+        "pos_deg": -9.23,
+        "voltage_v": 5.5,
+        "temperature_c": 25
+      },
+      "shoulder_lift": {
+        "pos_deg": -71.43,
+        "voltage_v": 5.5,
+        "temperature_c": 26
+      },
+      "elbow_flex": {
+        "pos_deg": 87.82,
+        "voltage_v": 5.5,
+        "temperature_c": 26
+      },
+      "wrist_flex": {
+        "pos_deg": 49.89,
+        "voltage_v": 5.5,
+        "temperature_c": 26
+      },
+      "wrist_roll": {
+        "pos_deg": -12.04,
+        "voltage_v": 5.5,
+        "temperature_c": 25
+      },
+      "gripper": {
+        "pos_deg": 0.17,
+        "voltage_v": 5.5,
+        "temperature_c": 25
+      }
+    }
+  },
+  "cameras": {
+    "front": {
+      "index": 0,
+      "connected": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "measured_fps": 16.1,
+      "mean_brightness": 104.4,
+      "snapshot_path": "/Users/ashi/proj/captures/health_front_idx0.png"
+    },
+    "wrist": {
+      "index": 1,
+      "connected": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "measured_fps": 16.2,
+      "mean_brightness": 122.7,
+      "snapshot_path": "/Users/ashi/proj/captures/health_wrist_idx1.png"
+    }
+  },
+  "healthy": true,
+  "warnings": []
+}

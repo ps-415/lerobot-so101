@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=71.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "so101-autoloop"
+version = "0.1.0"
+description = "Closed-Loop Visual Servoing, Hardware Safety Watchdog, and Autonomous Policy Learning on the SO-101 Robot Arm"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [
+    { name = "Patrick Shi" }
+]
+dependencies = [
+    "lerobot>=0.6.2",
+    "torch>=2.7.0",
+    "torchvision>=0.22.0",
+    "opencv-python-headless>=4.9.0",
+    "numpy>=2.0.0",
+    "Pillow>=10.0.0",
+    "rustypot>=1.13.1",
+    "pyserial>=3.5",
+]
+
+[project.scripts]
+autoloop = "autoloop.loop:main"

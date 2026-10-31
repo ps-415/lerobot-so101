@@ -1,0 +1,96 @@
+diff --git a/src/lerobot/cameras/opencv/camera_opencv.py b/src/lerobot/cameras/opencv/camera_opencv.py
+index f67ae069..823c32f1 100644
+--- a/src/lerobot/cameras/opencv/camera_opencv.py
++++ b/src/lerobot/cameras/opencv/camera_opencv.py
+@@ -228,6 +228,12 @@ class OpenCVCamera(Camera):
+         default_width = int(round(self.videocapture.get(cv2.CAP_PROP_FRAME_WIDTH)))
+         default_height = int(round(self.videocapture.get(cv2.CAP_PROP_FRAME_HEIGHT)))
+ 
++        # On macOS, Sonix USB2.0_CAM1 (default 1280x800) crops the top-left corner when 640x480 is set in hardware.
++        # Keep native sensor capture and resize in _postprocess_image() for full FOV and instant startup.
++        if platform.system() == "Darwin" and default_width == 1280 and default_height == 800:
++            self.fps = self.fps or self.videocapture.get(cv2.CAP_PROP_FPS)
++            return
++
+         if self.width is None or self.height is None:
+             self.width, self.height = default_width, default_height
+             self.capture_width, self.capture_height = default_width, default_height
+@@ -441,9 +447,14 @@ class OpenCVCamera(Camera):
+         h, w, c = image.shape
+ 
+         if h != self.capture_height or w != self.capture_width:
+-            raise RuntimeError(
+-                f"{self} frame width={w} or height={h} do not match configured width={self.capture_width} or height={self.capture_height}."
+-            )
++            if self.capture_width is not None and self.capture_height is not None:
++                image = cv2.resize(
++                    image, (self.capture_width, self.capture_height), interpolation=cv2.INTER_AREA
++                )
++            else:
++                raise RuntimeError(
++                    f"{self} frame width={w} or height={h} do not match configured width={self.capture_width} or height={self.capture_height}."
++                )
+ 
+         if c != 3:
+             raise RuntimeError(f"{self} frame channels={c} do not match expected 3 channels (RGB/BGR).")
+@@ -488,9 +499,10 @@ class OpenCVCamera(Camera):
+             except DeviceNotConnectedError:
+                 break
+             except Exception as e:
+-                if failure_count <= 10:
++                if failure_count <= 30:
+                     failure_count += 1
+                     logger.warning(f"Error reading frame in background thread for {self}: {e}")
++                    time.sleep(0.05)
+                 else:
+                     raise RuntimeError(f"{self} exceeded maximum consecutive read failures.") from e
+ 
+@@ -585,7 +597,7 @@ class OpenCVCamera(Camera):
+         return frame
+ 
+     @check_if_not_connected
+-    def read_latest(self, max_age_ms: int = 500) -> NDArray[Any]:
++    def read_latest(self, max_age_ms: int = 2000) -> NDArray[Any]:
+         """Return the most recent frame captured immediately (Peeking).
+ 
+         This method is non-blocking and returns whatever is currently in the
+diff --git a/src/lerobot/motors/motors_bus.py b/src/lerobot/motors/motors_bus.py
+index c1f1ba40..d9d35d0e 100644
+--- a/src/lerobot/motors/motors_bus.py
++++ b/src/lerobot/motors/motors_bus.py
+@@ -648,7 +648,7 @@ class SerialMotorsBus(MotorsBusBase):
+             )
+ 
+     @check_if_not_connected
+-    def disable_torque(self, motors: NameOrID | Sequence[NameOrID] | None = None, num_retry: int = 0) -> None:
++    def disable_torque(self, motors: NameOrID | Sequence[NameOrID] | None = None, num_retry: int = 3) -> None:
+         """Disable the torque of the selected motors.
+ 
+         With the torque off, a motor's EEPROM can be written, and a Feetech motor's lock opens
+@@ -667,7 +667,7 @@ class SerialMotorsBus(MotorsBusBase):
+         self._set_torque(motors, False, num_retry)
+ 
+     @check_if_not_connected
+-    def enable_torque(self, motors: NameOrID | Sequence[NameOrID] | None = None, num_retry: int = 0) -> None:
++    def enable_torque(self, motors: NameOrID | Sequence[NameOrID] | None = None, num_retry: int = 3) -> None:
+         """Enable the torque of the selected motors, and close the lock of Feetech motors.
+ 
+         Args:
+@@ -1094,7 +1094,7 @@ class SerialMotorsBus(MotorsBusBase):
+         motor: str,
+         *,
+         normalize: bool = True,
+-        num_retry: int = 0,
++        num_retry: int = 3,
+     ) -> Value:
+         """Read a register of one motor.
+ 
+@@ -1145,7 +1145,7 @@ class SerialMotorsBus(MotorsBusBase):
+ 
+     @check_if_not_connected
+     def write(
+-        self, data_name: str, motor: str, value: Value, *, normalize: bool = True, num_retry: int = 0
++        self, data_name: str, motor: str, value: Value, *, normalize: bool = True, num_retry: int = 3
+     ) -> None:
+         """Write a register of one motor, and wait for its answer.
+ 

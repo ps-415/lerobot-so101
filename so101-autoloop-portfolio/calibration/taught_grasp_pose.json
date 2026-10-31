@@ -1,0 +1,45 @@
+{
+  "timestamp": 1792730320.427679,
+  "grasp_pose_taught": {
+    "shoulder_pan": -5.36,
+    "shoulder_lift": -7.12,
+    "elbow_flex": 44.97,
+    "wrist_flex": 54.15,
+    "wrist_roll": -88.79,
+    "gripper": 25.63
+  },
+  "waypoints": {
+    "pre_grasp": {
+      "shoulder_pan": -5.36,
+      "shoulder_lift": -25.12,
+      "elbow_flex": 54.97,
+      "wrist_flex": 54.15,
+      "wrist_roll": -88.79,
+      "gripper": 48.0
+    },
+    "grasp_open": {
+      "shoulder_pan": -5.36,
+      "shoulder_lift": -7.12,
+      "elbow_flex": 44.97,
+      "wrist_flex": 54.15,
+      "wrist_roll": -88.79,
+      "gripper": 48.0
+    },
+    "grasp_closed": {
+      "shoulder_pan": -5.36,
+      "shoulder_lift": -7.12,
+      "elbow_flex": 44.97,
+      "wrist_flex": 54.15,
+      "wrist_roll": -88.79,
+      "gripper": 17.63
+    },
+    "lift_pose": {
+      "shoulder_pan": -5.36,
+      "shoulder_lift": -33.12,
+      "elbow_flex": 58.97,
+      "wrist_flex": 54.15,
+      "wrist_roll": -88.79,
+      "gripper": 17.63
+    }
+  }
+}
