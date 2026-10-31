@@ -1,0 +1,193 @@
+{
+  "iteration_id": "iter_dual_01",
+  "hardware_health": {
+    "timestamp": 1792728502.012392,
+    "follower": {
+      "port": "/dev/tty.usbmodem5A7A0581921",
+      "connected": true,
+      "is_calibrated": true,
+      "motors": {
+        "shoulder_pan": {
+          "pos_deg": -11.69,
+          "load": 0,
+          "voltage_v": 12.6,
+          "temperature_c": 31
+        },
+        "shoulder_lift": {
+          "pos_deg": -72.62,
+          "load": 0,
+          "voltage_v": 12.7,
+          "temperature_c": 31
+        },
+        "elbow_flex": {
+          "pos_deg": 94.2,
+          "load": 0,
+          "voltage_v": 12.5,
+          "temperature_c": 30
+        },
+        "wrist_flex": {
+          "pos_deg": 48.79,
+          "load": 0,
+          "voltage_v": 12.5,
+          "temperature_c": 32
+        },
+        "wrist_roll": {
+          "pos_deg": -11.87,
+          "load": 0,
+          "voltage_v": 12.5,
+          "temperature_c": 31
+        },
+        "gripper": {
+          "pos_deg": 1.42,
+          "load": 0,
+          "voltage_v": 12.5,
+          "temperature_c": 38
+        }
+      }
+    },
+    "leader": {
+      "port": "/dev/tty.usbmodem5A680100721",
+      "connected": true,
+      "is_calibrated": true,
+      "motors": {
+        "shoulder_pan": {
+          "pos_deg": -11.43,
+          "voltage_v": 5.5,
+          "temperature_c": 25
+        },
+        "shoulder_lift": {
+          "pos_deg": -71.34,
+          "voltage_v": 5.5,
+          "temperature_c": 26
+        },
+        "elbow_flex": {
+          "pos_deg": 87.82,
+          "voltage_v": 5.5,
+          "temperature_c": 25
+        },
+        "wrist_flex": {
+          "pos_deg": 49.27,
+          "voltage_v": 5.5,
+          "temperature_c": 25
+        },
+        "wrist_roll": {
+          "pos_deg": -11.6,
+          "voltage_v": 5.5,
+          "temperature_c": 25
+        },
+        "gripper": {
+          "pos_deg": 0.17,
+          "voltage_v": 5.5,
+          "temperature_c": 25
+        }
+      }
+    },
+    "cameras": {
+      "front": {
+        "index": 0,
+        "connected": true,
+        "shape": [
+          480,
+          640,
+          3
+        ],
+        "measured_fps": 4.0,
+        "mean_brightness": 51.3,
+        "snapshot_path": "/Users/ashi/proj/captures/health_front_idx0.png"
+      },
+      "wrist": {
+        "index": 1,
+        "connected": true,
+        "shape": [
+          480,
+          640,
+          3
+        ],
+        "measured_fps": 16.9,
+        "mean_brightness": 128.3,
+        "snapshot_path": "/Users/ashi/proj/captures/health_wrist_idx1.png"
+      }
+    },
+    "healthy": true,
+    "warnings": []
+  },
+  "training": {
+    "returncode": 0,
+    "duration_s": 42.16,
+    "checkpoint_path": "/Users/ashi/proj/autoloop_runs/iter_dual_01/train/checkpoints/last/pretrained_model",
+    "stdout_tail": "",
+    "stderr_tail": "00:18<00:16,  1.61step/s]\nTraining:  48%|\u2588\u2588\u2588\u2588\u258a     | 24/50 [00:19<00:16,  1.62step/s]\nTraining:  50%|\u2588\u2588\u2588\u2588\u2588     | 25/50 [00:19<00:15,  1.60step/s]\nTraining:  52%|\u2588\u2588\u2588\u2588\u2588\u258f    | 26/50 [00:20<00:14,  1.60step/s]\nTraining:  54%|\u2588\u2588\u2588\u2588\u2588\u258d    | 27/50 [00:20<00:14,  1.59step/s]\nTraining:  56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 28/50 [00:21<00:13,  1.58step/s]\nTraining:  58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 29/50 [00:22<00:13,  1.59step/s]\nTraining:  60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 30/50 [00:22<00:12,  1.59step/s]\nTraining:  62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 31/50 [00:23<00:11,  1.60step/s]\nTraining:  64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 32/50 [00:24<00:11,  1.61step/s]\nTraining:  66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 33/50 [00:24<00:10,  1.61step/s]\nTraining:  68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 34/50 [00:25<00:09,  1.61step/s]\nTraining:  70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 35/50 [00:25<00:09,  1.61step/s]\nTraining:  72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 36/50 [00:26<00:08,  1.61step/s]\nTraining:  74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 37/50 [00:27<00:08,  1.60step/s]\nTraining:  76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 38/50 [00:27<00:07,  1.59step/s]\nTraining:  78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 39/50 [00:28<00:06,  1.60step/s]\nTraining:  80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 40/50 [00:29<00:06,  1.60step/s]\nTraining:  82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 41/50 [00:29<00:05,  1.60step/s]\nTraining:  84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 42/50 [00:30<00:04,  1.61step/s]\nTraining:  86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 43/50 [00:30<00:04,  1.61step/s]\nTraining:  88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 44/50 [00:31<00:03,  1.60step/s]\nTraining:  90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 45/50 [00:32<00:03,  1.60step/s]\nTraining:  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 46/50 [00:32<00:02,  1.55step/s]\nTraining:  94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 47/50 [00:33<00:01,  1.56step/s]\nTraining:  96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 48/50 [00:34<00:01,  1.56step/s]\nTraining:  98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 49/50 [00:34<00:00,  1.57step/s]\nTraining: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 50/50 [00:35<00:00,  1.59step/s]INFO 2026-10-22 21:09:10 t_train.py:1014 Checkpoint policy after step 50\nINFO 2026-10-22 21:09:10 n/_torch.py:299 Model weights successfully saved to /Users/ashi/proj/autoloop_runs/iter_dual_01/train/checkpoints/000050/pretrained_model!\n\nTraining: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 50/50 [00:35<00:00,  1.39step/s]\nINFO 2026-10-22 21:09:11 t_train.py:1118 End of training\n"
+  },
+  "rollout": {
+    "run_id": "iter_dual_01_eval",
+    "checkpoint_path": "/Users/ashi/proj/autoloop_runs/iter_dual_01/train/checkpoints/last/pretrained_model",
+    "filmstrip_png": "/Users/ashi/proj/captures/iter_dual_01_eval_filmstrip.png",
+    "telemetry_summary": {
+      "num_steps": 30,
+      "safety_tripped": false,
+      "trip_reason": "",
+      "max_abs_load": {
+        "shoulder_pan": 20,
+        "shoulder_lift": 48,
+        "elbow_flex": 336,
+        "wrist_flex": 32,
+        "wrist_roll": 24,
+        "gripper": 80
+      },
+      "max_abs_tracking_error_deg": {
+        "shoulder_pan": 0.26,
+        "shoulder_lift": 1.27,
+        "elbow_flex": 6.37,
+        "wrist_flex": 0.48,
+        "wrist_roll": 0.27,
+        "gripper": 1.26
+      },
+      "joint_range_swept_deg": {
+        "shoulder_pan": 0.0,
+        "shoulder_lift": 1.41,
+        "elbow_flex": 4.22,
+        "wrist_flex": 0.88,
+        "wrist_roll": 0.09,
+        "gripper": 0.14
+      },
+      "watchdog_clamped_step_counts": {
+        "shoulder_pan": 0,
+        "shoulder_lift": 0,
+        "elbow_flex": 0,
+        "wrist_flex": 0,
+        "wrist_roll": 0,
+        "gripper": 0
+      },
+      "start_pose": {
+        "shoulder_pan": -11.692307692307692,
+        "shoulder_lift": -72.61538461538461,
+        "elbow_flex": 94.1978021978022,
+        "wrist_flex": 48.79120879120879,
+        "wrist_roll": -11.868131868131869,
+        "gripper": 1.423728813559322
+      },
+      "end_pose": {
+        "shoulder_pan": -11.692307692307692,
+        "shoulder_lift": -71.20879120879121,
+        "elbow_flex": 89.97802197802197,
+        "wrist_flex": 49.67032967032967,
+        "wrist_roll": -11.780219780219781,
+        "gripper": 1.2881355932203389
+      }
+    },
+    "critic_evaluation": {
+      "success": false,
+      "reward": 0.0,
+      "stage_reached": "idle",
+      "failure_mode": "insufficient_arm_motion",
+      "metrics": {
+        "reach_delta_deg": 5.63,
+        "gripper_min_pct": 1.29,
+        "gripper_max_pct": 1.42,
+        "max_gripper_load": 80,
+        "max_shoulder_lift_load": 48,
+        "visual_motion_score": 2.68
+      }
+    }
+  }
+}

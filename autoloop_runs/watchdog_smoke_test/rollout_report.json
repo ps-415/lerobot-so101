@@ -1,0 +1,72 @@
+{
+  "run_id": "watchdog_smoke_test",
+  "checkpoint_path": null,
+  "filmstrip_png": "/Users/ashi/proj/captures/watchdog_smoke_test_filmstrip.png",
+  "telemetry_summary": {
+    "num_steps": 24,
+    "safety_tripped": false,
+    "trip_reason": "",
+    "max_abs_load": {
+      "shoulder_pan": 0,
+      "shoulder_lift": 0,
+      "elbow_flex": 24,
+      "wrist_flex": 0,
+      "wrist_roll": 40,
+      "gripper": 0
+    },
+    "max_abs_tracking_error_deg": {
+      "shoulder_pan": 0.0,
+      "shoulder_lift": 0.0,
+      "elbow_flex": 0.0,
+      "wrist_flex": 0.09,
+      "wrist_roll": 1.06,
+      "gripper": 0.0
+    },
+    "joint_range_swept_deg": {
+      "shoulder_pan": 0.0,
+      "shoulder_lift": 0.0,
+      "elbow_flex": 0.0,
+      "wrist_flex": 0.18,
+      "wrist_roll": 3.16,
+      "gripper": 0.0
+    },
+    "watchdog_clamped_step_counts": {
+      "shoulder_pan": 0,
+      "shoulder_lift": 0,
+      "elbow_flex": 0,
+      "wrist_flex": 0,
+      "wrist_roll": 0,
+      "gripper": 0
+    },
+    "start_pose": {
+      "shoulder_pan": -4.747252747252747,
+      "shoulder_lift": -103.12087912087912,
+      "elbow_flex": 97.53846153846153,
+      "wrist_flex": 77.45054945054945,
+      "wrist_roll": -88.26373626373626,
+      "gripper": 9.830508474576272
+    },
+    "end_pose": {
+      "shoulder_pan": -4.747252747252747,
+      "shoulder_lift": -103.12087912087912,
+      "elbow_flex": 97.53846153846153,
+      "wrist_flex": 77.36263736263736,
+      "wrist_roll": -89.58241758241758,
+      "gripper": 9.830508474576272
+    }
+  },
+  "critic_evaluation": {
+    "success": false,
+    "reward": 0.0,
+    "stage_reached": "idle",
+    "failure_mode": "insufficient_arm_motion",
+    "metrics": {
+      "reach_delta_deg": 0.0,
+      "gripper_min_pct": 9.83,
+      "gripper_max_pct": 9.83,
+      "max_gripper_load": 0,
+      "max_shoulder_lift_load": 0,
+      "visual_motion_score": 2.04
+    }
+  }
+}

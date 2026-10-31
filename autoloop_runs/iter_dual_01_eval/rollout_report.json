@@ -1,0 +1,72 @@
+{
+  "run_id": "iter_dual_01_eval",
+  "checkpoint_path": "/Users/ashi/proj/autoloop_runs/iter_dual_01/train/checkpoints/last/pretrained_model",
+  "filmstrip_png": "/Users/ashi/proj/captures/iter_dual_01_eval_filmstrip.png",
+  "telemetry_summary": {
+    "num_steps": 30,
+    "safety_tripped": false,
+    "trip_reason": "",
+    "max_abs_load": {
+      "shoulder_pan": 20,
+      "shoulder_lift": 48,
+      "elbow_flex": 336,
+      "wrist_flex": 32,
+      "wrist_roll": 24,
+      "gripper": 80
+    },
+    "max_abs_tracking_error_deg": {
+      "shoulder_pan": 0.26,
+      "shoulder_lift": 1.27,
+      "elbow_flex": 6.37,
+      "wrist_flex": 0.48,
+      "wrist_roll": 0.27,
+      "gripper": 1.26
+    },
+    "joint_range_swept_deg": {
+      "shoulder_pan": 0.0,
+      "shoulder_lift": 1.41,
+      "elbow_flex": 4.22,
+      "wrist_flex": 0.88,
+      "wrist_roll": 0.09,
+      "gripper": 0.14
+    },
+    "watchdog_clamped_step_counts": {
+      "shoulder_pan": 0,
+      "shoulder_lift": 0,
+      "elbow_flex": 0,
+      "wrist_flex": 0,
+      "wrist_roll": 0,
+      "gripper": 0
+    },
+    "start_pose": {
+      "shoulder_pan": -11.692307692307692,
+      "shoulder_lift": -72.61538461538461,
+      "elbow_flex": 94.1978021978022,
+      "wrist_flex": 48.79120879120879,
+      "wrist_roll": -11.868131868131869,
+      "gripper": 1.423728813559322
+    },
+    "end_pose": {
+      "shoulder_pan": -11.692307692307692,
+      "shoulder_lift": -71.20879120879121,
+      "elbow_flex": 89.97802197802197,
+      "wrist_flex": 49.67032967032967,
+      "wrist_roll": -11.780219780219781,
+      "gripper": 1.2881355932203389
+    }
+  },
+  "critic_evaluation": {
+    "success": false,
+    "reward": 0.0,
+    "stage_reached": "idle",
+    "failure_mode": "insufficient_arm_motion",
+    "metrics": {
+      "reach_delta_deg": 5.63,
+      "gripper_min_pct": 1.29,
+      "gripper_max_pct": 1.42,
+      "max_gripper_load": 80,
+      "max_shoulder_lift_load": 48,
+      "visual_motion_score": 2.68
+    }
+  }
+}

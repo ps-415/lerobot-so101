@@ -1,0 +1,92 @@
+{
+  "run_id": "iter_pingpong_01_eval",
+  "checkpoint_path": "/Users/ashi/proj/autoloop_runs/iter_pingpong_01/train/checkpoints/last/pretrained_model",
+  "filmstrip_png": "/Users/ashi/proj/captures/iter_pingpong_01_eval_filmstrip.png",
+  "telemetry_summary": {
+    "num_steps": 64,
+    "safety_tripped": false,
+    "trip_reason": "",
+    "max_abs_load": {
+      "shoulder_pan": 28,
+      "shoulder_lift": 324,
+      "elbow_flex": 328,
+      "wrist_flex": 348,
+      "wrist_roll": 36,
+      "gripper": 420
+    },
+    "max_abs_tracking_error_deg": {
+      "shoulder_pan": 0.34,
+      "shoulder_lift": 76.6,
+      "elbow_flex": 45.59,
+      "wrist_flex": 22.51,
+      "wrist_roll": 0.62,
+      "gripper": 24.75
+    },
+    "joint_range_swept_deg": {
+      "shoulder_pan": 0.09,
+      "shoulder_lift": 77.01,
+      "elbow_flex": 43.69,
+      "wrist_flex": 22.15,
+      "wrist_roll": 0.53,
+      "gripper": 24.81
+    },
+    "watchdog_clamped_step_counts": {
+      "shoulder_pan": 0,
+      "shoulder_lift": 19,
+      "elbow_flex": 15,
+      "wrist_flex": 6,
+      "wrist_roll": 0,
+      "gripper": 4
+    },
+    "start_pose": {
+      "shoulder_pan": -5.0989010989010985,
+      "shoulder_lift": -102.15384615384616,
+      "elbow_flex": 96.74725274725274,
+      "wrist_flex": 76.65934065934066,
+      "wrist_roll": -89.4065934065934,
+      "gripper": 10.372881355932204
+    },
+    "end_pose": {
+      "shoulder_pan": -5.186813186813187,
+      "shoulder_lift": -25.142857142857142,
+      "elbow_flex": 53.05494505494506,
+      "wrist_flex": 54.505494505494504,
+      "wrist_roll": -88.87912087912088,
+      "gripper": 35.05084745762712
+    }
+  },
+  "critic_evaluation": {
+    "success": true,
+    "reward": 0.8,
+    "stage_reached": "ball_picked_or_moved",
+    "failure_mode": "none",
+    "metrics": {
+      "reach_delta_deg": 120.7,
+      "gripper_min_pct": 10.37,
+      "gripper_max_pct": 35.19,
+      "max_gripper_load": 420,
+      "max_shoulder_lift_load": 324,
+      "visual_motion_score": 6.16,
+      "ball_start_front": {
+        "cx": 152,
+        "cy": 349,
+        "radius": 11.7,
+        "color": "orange",
+        "circularity": 0.47,
+        "norm_x": 0.238,
+        "norm_y": 0.727
+      },
+      "ball_end_front": {
+        "cx": 150,
+        "cy": 349,
+        "radius": 8.9,
+        "color": "orange",
+        "circularity": 0.61,
+        "norm_x": 0.234,
+        "norm_y": 0.727
+      },
+      "ball_displacement_px": 2.0,
+      "wrist_ball_aligned_samples": 1
+    }
+  }
+}

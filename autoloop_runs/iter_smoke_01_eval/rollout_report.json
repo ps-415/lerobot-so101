@@ -1,0 +1,72 @@
+{
+  "run_id": "iter_smoke_01_eval",
+  "checkpoint_path": "/Users/ashi/proj/autoloop_runs/iter_smoke_01/train/checkpoints/last/pretrained_model",
+  "filmstrip_png": "/Users/ashi/proj/captures/iter_smoke_01_eval_filmstrip.png",
+  "telemetry_summary": {
+    "num_steps": 30,
+    "safety_tripped": false,
+    "trip_reason": "",
+    "max_abs_load": {
+      "shoulder_pan": 24,
+      "shoulder_lift": 20,
+      "elbow_flex": 140,
+      "wrist_flex": 32,
+      "wrist_roll": 24,
+      "gripper": 76
+    },
+    "max_abs_tracking_error_deg": {
+      "shoulder_pan": 0.35,
+      "shoulder_lift": 0.13,
+      "elbow_flex": 3.21,
+      "wrist_flex": 0.38,
+      "wrist_roll": 0.26,
+      "gripper": 1.31
+    },
+    "joint_range_swept_deg": {
+      "shoulder_pan": 0.18,
+      "shoulder_lift": 0.0,
+      "elbow_flex": 1.23,
+      "wrist_flex": 0.26,
+      "wrist_roll": 0.0,
+      "gripper": 0.27
+    },
+    "watchdog_clamped_step_counts": {
+      "shoulder_pan": 0,
+      "shoulder_lift": 0,
+      "elbow_flex": 0,
+      "wrist_flex": 0,
+      "wrist_roll": 0,
+      "gripper": 0
+    },
+    "start_pose": {
+      "shoulder_pan": -1.2307692307692308,
+      "shoulder_lift": -103.20879120879121,
+      "elbow_flex": 96.74725274725274,
+      "wrist_flex": 73.05494505494505,
+      "wrist_roll": 1.7582417582417582,
+      "gripper": 1.5593220338983051
+    },
+    "end_pose": {
+      "shoulder_pan": -1.4065934065934067,
+      "shoulder_lift": -103.20879120879121,
+      "elbow_flex": 95.51648351648352,
+      "wrist_flex": 73.31868131868131,
+      "wrist_roll": 1.7582417582417582,
+      "gripper": 1.2881355932203389
+    }
+  },
+  "critic_evaluation": {
+    "success": false,
+    "reward": 0.0,
+    "stage_reached": "idle",
+    "failure_mode": "insufficient_arm_motion",
+    "metrics": {
+      "reach_delta_deg": 1.23,
+      "gripper_min_pct": 1.29,
+      "gripper_max_pct": 1.56,
+      "max_gripper_load": 76,
+      "max_shoulder_lift_load": 20,
+      "visual_motion_score": 2.99
+    }
+  }
+}
